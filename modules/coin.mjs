@@ -42,7 +42,12 @@ function coinFlip() {
  */
 
 function coinFlips(flips) {
+  let coinFlips = new Array(flips);
+  for(var i = 0; i < flips; i++){
+    coinFlips[i] = coinFlip();
 
+  }
+  return coinFlips;
 }
 
 /** Count multiple flips
