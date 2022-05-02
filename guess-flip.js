@@ -1,0 +1,11 @@
+import { flipACoin } from "./modules/coin.mjs";
+import minimist from "minimist";
+
+const args = minimist(process.argv.slice(2));
+const result = args.call;
+
+if (result == "heads" || result == "tails") {
+    console.log(flipACoin(result));
+} else {
+    console.log("Error: no input. \n Usage: node guess-flip --call=[heads|tails]")
+}
